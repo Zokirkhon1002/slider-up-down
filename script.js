@@ -12,6 +12,7 @@ btnUp.addEventListener("click", () => changeSlide('up'));
 btnDown.addEventListener("click", () => changeSlide('down'));
 
 const changeSlide = (UPorDOWN) => {
+    iconFunction();
     let sliderHeight = container.clientHeight;
 
     if(UPorDOWN === 'up'){
@@ -30,3 +31,9 @@ const changeSlide = (UPorDOWN) => {
     left.style.transform = `translateY(${x * sliderHeight}px)`;
 
 }
+
+function iconFunction() {
+    let icon = document.getElementById("icon");
+    icon.href = "https://source.unsplash.com/random";
+}
+iconFunction();
